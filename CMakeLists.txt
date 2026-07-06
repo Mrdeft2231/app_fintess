@@ -15,7 +15,9 @@ qt_add_executable(appapp_fitness
 qt_add_qml_module(appapp_fitness
     URI app_fitness
     QML_FILES
-        qml/Main.qml
+    qml/Main.qml
+    QML_FILES qml/ShadowText.qml
+    QML_FILES qml/Input.qml
 
 )
 
