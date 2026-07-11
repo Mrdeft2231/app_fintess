@@ -18,8 +18,11 @@ qt_add_qml_module(appapp_fitness
     qml/Main.qml
     QML_FILES qml/ShadowText.qml
     QML_FILES qml/Input.qml
+    QML_FILES qml/ShButton.qml
 
 )
+
+target_compile_definitions(appapp_fitness PRIVATE QT_QML_DEBUG)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -41,3 +44,5 @@ install(TARGETS appapp_fitness
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+
+target_compile_definitions(appapp_fitness PRIVATE PROJECT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
