@@ -11,6 +11,9 @@ Item {
     property alias textColor: multiText.color
     property alias shadowColor: effect.shadowColor
 
+    property alias wrapMode: multiText.wrapMode
+    property alias horizontalAlignment: multiText.horizontalAlignment
+
 
     
     // Неявные размеры, чтобы компонент автоматически подстраивался под размер текста

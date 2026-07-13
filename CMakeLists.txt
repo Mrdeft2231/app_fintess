@@ -16,9 +16,12 @@ qt_add_qml_module(appapp_fitness
     URI app_fitness
     QML_FILES
     qml/Main.qml
-    QML_FILES qml/ShadowText.qml
-    QML_FILES qml/Input.qml
-    QML_FILES qml/ShButton.qml
+    QML_FILES qml/components/ShadowText.qml
+    QML_FILES qml/components/Input.qml
+    QML_FILES qml/components/ShButton.qml
+    QML_FILES qml/screens/Register.qml
+    QML_FILES qml/screens/Recovery.qml
+    QML_FILES qml/screens/Auth.qml
 
 )
 
