@@ -17,8 +17,6 @@ Item {
 
     ColumnLayout {
         anchors.fill: parent
-
-        // anchors.centerIn: parent
         spacing: 0
 
         Item {

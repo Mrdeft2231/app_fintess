@@ -12,6 +12,13 @@ qt_add_executable(appapp_fitness
     src/main.cpp
 )
 
+# 1. Находим все файлы в папке images (svg, png, jpg)
+file(GLOB_RECURSE FITNESS_IMAGES
+    "qml/images/*.svg"
+    "qml/images/*.png"
+    "qml/images/*.jpg"
+)
+
 qt_add_qml_module(appapp_fitness
     URI app_fitness
     QML_FILES
@@ -19,9 +26,15 @@ qt_add_qml_module(appapp_fitness
     QML_FILES qml/components/ShadowText.qml
     QML_FILES qml/components/Input.qml
     QML_FILES qml/components/ShButton.qml
-    QML_FILES qml/screens/Register.qml
-    QML_FILES qml/screens/Recovery.qml
-    QML_FILES qml/screens/Auth.qml
+    QML_FILES qml/components/ArrowButton.qml
+    QML_FILES qml/screens/auth/Register.qml
+    QML_FILES qml/screens/auth/Recovery.qml
+    QML_FILES qml/screens/auth/Auth.qml
+    QML_FILES qml/screens/app/App.qml
+    RESOURCES
+            qml/images/arrow.svg
+            qml/images/settings.png
+            QML_FILES qml/components/SettingButton.qml
 
 )
 
@@ -49,3 +62,8 @@ install(TARGETS appapp_fitness
 )
 
 target_compile_definitions(appapp_fitness PRIVATE PROJECT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
+
+
+
+
+

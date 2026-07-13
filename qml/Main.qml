@@ -16,7 +16,7 @@ Window {
         id: myStackView
         anchors.fill: parent
         // При старте загружаем компонент авторизации, который объявлен ниже
-        initialItem: "screens/Auth.qml"
+        initialItem: "screens/app/App.qml"
     }
 
 
