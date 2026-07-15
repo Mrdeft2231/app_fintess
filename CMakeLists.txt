@@ -40,6 +40,13 @@ qt_add_qml_module(appapp_fitness
             qml/images/calendar.svg
             qml/images/plus.svg
             QML_FILES qml/components/SettingButton.qml
+            SOURCES src/database/databasemanager.h src/database/databasemanager.cpp
+            SOURCES src/database/daos/userdao.h src/database/daos/userdao.cpp
+            SOURCES src/database/daos/training.h src/database/daos/training.cpp
+            SOURCES src/database/models/training.h src/database/models/training.cpp
+            SOURCES src/database/models/user.h src/database/models/user.cpp
+            SOURCES src/core/appcontroller.h src/core/appcontroller.cpp
+
 
 )
 
