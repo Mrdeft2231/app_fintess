@@ -12,6 +12,7 @@ Item {
         radius: 5
         visible: false
 
+
         gradient: Gradient {
             orientation: Gradient.Horizontal
             GradientStop { position: 0.52; color: "#31353D" }

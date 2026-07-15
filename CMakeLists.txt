@@ -34,6 +34,11 @@ qt_add_qml_module(appapp_fitness
     RESOURCES
             qml/images/arrow.svg
             qml/images/settings.png
+            qml/images/treadmill.png
+            qml/images/dumbbells.png
+            qml/images/heart.svg
+            qml/images/calendar.svg
+            qml/images/plus.svg
             QML_FILES qml/components/SettingButton.qml
 
 )

@@ -9,6 +9,7 @@ Item {
     property alias btText: controlButton.text
     property alias btSizeText: controlButton.font.pixelSize
     property alias btBoldText: controlButton.font.bold
+    property alias btImage: img.source
     
     property alias btBlockWidth: backgr.implicitWidth
     property alias btBlockHeight: backgr.implicitHeight
@@ -32,14 +33,21 @@ Item {
             id: backgr
             implicitWidth: 155
             implicitHeight: 45
+
             
             Rectangle {
                 id: buttonBg
+
                 anchors.fill: parent
                 radius: 25
                 opacity: controlButton.enabled ? 1 : 0.3
                 color: controlButton.down ? "#768BDD" : "#76DDB3"
                 visible: false
+                Image {
+                    id: img
+                    anchors.centerIn: parent
+                }
+
             }
             
             MultiEffect {
@@ -52,6 +60,7 @@ Item {
                 shadowBlur: 1.0
                 shadowHorizontalOffset: 0
                 shadowVerticalOffset: 0
+
             }
         }
     }
