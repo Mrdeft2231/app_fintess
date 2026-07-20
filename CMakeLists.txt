@@ -46,6 +46,9 @@ qt_add_qml_module(appapp_fitness
             SOURCES src/database/models/training.h src/database/models/training.cpp
             SOURCES src/database/models/user.h src/database/models/user.cpp
             SOURCES src/core/appcontroller.h src/core/appcontroller.cpp
+            SOURCES src/database/databasemanager.h src/database/databasemanager.cpp
+            RESOURCES Dockerfile
+            RESOURCES compose.yaml
 
 
 )
@@ -76,6 +79,5 @@ install(TARGETS appapp_fitness
 target_compile_definitions(appapp_fitness PRIVATE PROJECT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
 
 
-
-
-
+find_package(Qt6 REQUIRED COMPONENTS Sql)
+target_link_libraries(appapp_fitness PRIVATE Qt6::Sql)

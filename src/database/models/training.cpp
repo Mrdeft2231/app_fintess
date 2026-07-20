@@ -1,3 +1,3 @@
 #include "training.h"
 
-training::training() {}
+// training::training() {}
